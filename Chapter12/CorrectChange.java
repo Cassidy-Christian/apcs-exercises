@@ -6,29 +6,22 @@ public class CorrectChange
     {
         Scanner scan = new Scanner(System.in);
         System.out.println("Input the cents:");
-       double totalcents =  scan.nextInt();
- 
-        double numdollars, numquarters, numdimes, numnickels, numcents; 
-        double centsleft;
+        int amount= scan.nextInt();
 
-        double dollars = 100; 
-        double quarters = 25; 
-        double dimes = 10; 
-        double nickels = 5; 
-        double cents = 1; 
+        int dollars, quarters, dimes, nickels, cents; 
 
+    
+        dollars = amount/100;
+        amount = amount % 100; 
+        quarters = amount / 25;
+        amount = amount % 25; 
+        dimes = amount / 10; 
+        amount = amount % 10; 
+        nickels = amount / 5; 
+        amount = amount % 5;
+        cents = amount / 1; 
+        amount = amount % 1; 
 
-        numdollars = totalcents/dollars; 
-        centsleft = totalcents % dollars ; 
-        numquarters = centsleft/quarters; 
-        centsleft= centsleft/quarters; 
-        numdimes= centsleft/dimes;
-        centsleft= centsleft % dimes; 
-        numnickels= centsleft/nickels; 
-        centsleft= centsleft % nickels; 
-        numcents = centsleft/cents; 
-        centsleft = centsleft % cents;
-
-        System.out.println(" Your change is: " + numdollars + " dollar, " + numquarters +  " quarters," + numdimes + " dimes, " + numnickels + " nickels, " + numcents + " and cents.");
+        System.out.println(" Your change is: " + dollars + " dollar, " + quarters +  " quarters," + dimes + " dimes, " + nickels + " nickels, " + cents + " and cents.");
     }
 }
