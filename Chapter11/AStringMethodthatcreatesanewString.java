@@ -5,7 +5,7 @@ public class AStringMethodthatcreatesanewString
     String str;
     int    len;
 
-    str = new String("                      ");
+    str = new String("2020");
     String second;
     
     second = str.trim();
