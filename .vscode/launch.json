@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - OhmsLaw",
+            "request": "launch",
+            "mainClass": "OhmsLaw"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - AreaofaCircle",
             "request": "launch",
             "mainClass": "AreaofaCircle"
