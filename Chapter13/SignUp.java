@@ -3,29 +3,24 @@ import java.util.Scanner;
 public class SignUp{
     
     public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
+        Scanner scan =new Scanner(System.in);
+        
         
         System.out.print("Enter a new username:");
-        String userName=sc.nextLine();
-        
-        //user name check 
-        if(userName.matches("admin person jimbob234"))
-        {
-            System.out.println("Username already taken. Restart if you receive this message.");
-        } 
-        else if (userName.matches("skater_gurl17 gary"))
-        {
-            System.out.println("user name already taken");
-        }
-        else {
-            System.out.println("Username is good! Password must start with a vowel, contain a symbol, not have the username anywhere in the password, and numbers are only allowed in the last two places"); }
+        String userName=scan.nextLine();
+     //username check
+    while(userName.equalsIgnoreCase("admin person") || userName.equalsIgnoreCase("skater_gurl17")){
+         System.out.print("Username already taken. Enter a new username:");
+         userName=scan.nextLine();
+}
+       
 
             //password check 
-        System.out.print("Enter a password:");
-        String pass=sc.nextLine();
+        System.out.print("Enter a password. Password must start with a vowel, include a symbol, not contain the username, and can only have two numbers at the end.");
+            String pass=scan.nextLine();
         
-        String lPass=pass.toLowerCase();
-        char first=lPass.charAt(0);
+            String lPass=pass.toLowerCase();
+            char first=lPass.charAt(0);
         
         if(lPass.matches("^[aeiouy]\\D*?[#!$&]\\D*?\\d{0,2}$") && !lPass.contains(userName.toLowerCase())){
             System.out.println("It's good!");
@@ -33,5 +28,4 @@ public class SignUp{
             System.out.println("No good!");
         }
     }
-    
 }
