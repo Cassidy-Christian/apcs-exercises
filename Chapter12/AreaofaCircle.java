@@ -12,6 +12,6 @@ public class AreaofaCircle
 
         area = rad * rad * Math.PI;
 
-        System.out.println("The radius s: " + rad + "The area is:" + area);
+        System.out.println("The radius is: " + rad + "The area is:" + area);
     }
 }
