@@ -7,20 +7,20 @@ public class Furthersubstringfun
 
         Scanner scan = new Scanner(System.in);
  
+String str, substring, begin, end; 
 
-        double X, Y; 
+        System.out.print("Enter a string:");
+        str = scan.nextLine();
 
-        System.out.println("Enter a string:");
-        String str = in.nextLine();
+        System.out.print("Enter beginning index:");
+        begin = scan.nextLine();
 
-        System.out.println("Enter beginning index:");
-        X = scan.nextInt();
+        System.out.print("Enter ending index:");
+        end = scan.nextLine();
 
-        System.out.println("Enter ending index:");
-        Y = scan.nextInt();
+        substring = str.substring (Integer.valueOf(begin), Integer.valueOf(end));
 
-        String newString = originalString.substring( X, Y );
-
-        System.out.println("Substring:" + newString);
+        System.out.println("Original string:" + str);
+        System.out.println("New string:" + substring);
     }
 }
