@@ -8,7 +8,7 @@ public class LogarithmBaseTwo
         double log2X, X; 
 
         System.out.println("Enter a double: ");
-         X = scan.nextint();
+         X = scan.nextDouble();
 
          log2X = Math.log(X) / Math.log(2);
 
