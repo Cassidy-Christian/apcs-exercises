@@ -8,7 +8,7 @@ public class Distanceabricktravels
         double time, distance; 
 
         System.out.println("Enter the number of seconds:");
-         time = scan.nextInt();
+         time = scan.nextDouble();
 
         double g = 32.174; 
 
