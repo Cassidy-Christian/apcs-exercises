@@ -8,10 +8,10 @@ public class HarmonicMean
         float H, X, Y, Arith; 
 
         System.out.println("Enter X: ");
-         X = scan.nextInt();
+         X = scan.nextFloat();
 
         System.out.println("Enter Y:");
-        Y = scan.nextInt();
+        Y = scan.nextFloat();
 
         H = 2 / (1/X + 1/Y); 
 
