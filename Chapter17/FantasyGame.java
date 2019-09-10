@@ -22,9 +22,9 @@ public class FantasyGame
         luck = scan.nextFloat();
 
 
-        if(nuts > bolts  && (2 * bolts) == washers )
+        if(strength+health+luck>15 )
         {
-            System.out.println("Order is OK");
+            System.out.println("You have given your character too many points! Default values have been assigned:"+ name +);
         } 
         else {
             System.out.println("Check the Order"); }
@@ -34,6 +34,8 @@ public class FantasyGame
         cost_washers = washers * 1; 
 
         total_cost = cost_bolts + cost_nuts + cost_washers; 
+
+i want to check that this saves 
 
         System.out.println("Total cost: " + total_cost + " cents");
     }
