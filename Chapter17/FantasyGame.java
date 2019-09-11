@@ -24,19 +24,10 @@ public class FantasyGame
 
         if(strength+health+luck>15 )
         {
-            System.out.println("You have given your character too many points! Default values have been assigned:"+ name +);
+            System.out.println("You have given your character too many points! Default values have been assigned:"+ name +", strength: 5, health: 5, luck: 5");
         } 
         else {
-            System.out.println("Check the Order"); }
+            System.out.println("Your charcter is beautiful!"); }
 
-        cost_bolts = bolts *5; 
-        cost_nuts = nuts * 3; 
-        cost_washers = washers * 1; 
-
-        total_cost = cost_bolts + cost_nuts + cost_washers; 
-
-i want to check that this saves 
-
-        System.out.println("Total cost: " + total_cost + " cents");
     }
 }
