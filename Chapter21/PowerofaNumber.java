@@ -17,6 +17,10 @@ public class PowerofaNumber
     System.out.print( "Enter N: " );
     N = scan.nextInt();
 
+    if (N<-.01){
+        System.out.print("N must be a positive integer.");
+    } else {
+    System.out.println( X + " raised to  " +N+" is: " + answer );
     if ( X >= 0 )
     {
       while ( N > 0 )    
@@ -24,11 +28,8 @@ public class PowerofaNumber
         answer = answer * X;
         N= N-1; 
       }
-      System.out.println( X + " raised to that power is: " + answer );
+   
     }
-    else
-    {
-      System.out.println("N must be a positive integer.");
-    }
-  }
 }
+}}
+
