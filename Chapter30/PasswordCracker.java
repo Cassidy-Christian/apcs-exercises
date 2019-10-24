@@ -20,6 +20,9 @@ public class PasswordCracker{
     
     
       for(;cp<5;cp++){
+        if(cp>=digits.length()){
+            System.out.print("The password was not found after "+runs+" guesses\n");
+        }  
         for(cl=0; cl<26; cl++){
             System.out.print(choices.charAt(cl)+":"+digits.charAt(cp)+"\t");
             runs+=1;
