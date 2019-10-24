@@ -8,10 +8,11 @@ public class retry
 
             double x=2, sum=1; 
             double term;
-            double n=0;  
+            double n=1;  
             double actual, small_number= 1.0E-12; 
         
-        
+            System.out.println( "Enter x:" );
+            x = scan.nextInt();
 
          actual = Math.exp(x); 
 
