@@ -15,7 +15,7 @@ public class Triangle2
         if (triangle>n*n){
            n+=1;
        }
-       System.out.println("Not a square and triangle number"+triangle);
+       System.out.println("Not a square and triangle number: "+triangle);
    }
    System.out.println("Is a triangle and square number at: "+triangle);
   }
