@@ -15,6 +15,7 @@ System.out.println("Enter end:");
 limit = scan.nextInt();
 
 while ( count <= limit )  // there are changes here
+
 {
   System.out.println( count );
   count = count + 1;   
