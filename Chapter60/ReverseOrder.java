@@ -13,7 +13,7 @@ class ReverseOrder
     val[0]=val[3];
     val[3]=temp;
     
-    temp=val[1]
+    temp=val[1]; 
     val[1]=val[2]; 
     val[2]=temp;  
     
