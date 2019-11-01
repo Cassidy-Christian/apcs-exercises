@@ -6,7 +6,7 @@ public class moreConeMethods
   private double radius;  // radius of the base
   private double height;  // height of the cone
   
-  public Cone( double radius, double height )
+  public moreConeMethods( double radius, double height )
   {
     this.radius = radius;
     this.height = height;
@@ -25,7 +25,7 @@ public class moreConeMethods
     return Math.sqrt((radius*radius)+(height*height)); 
   }
   public double angle(){
-    return Math.tan(radius/height); 
+    return Math.atan(radius/height); 
   }
   
   public void setHeight( double height )
