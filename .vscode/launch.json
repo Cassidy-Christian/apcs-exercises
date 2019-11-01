@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BoxTester",
+            "request": "launch",
+            "mainClass": "BoxTester"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - OhmsLaw",
             "request": "launch",
             "mainClass": "OhmsLaw"
