@@ -11,7 +11,7 @@ class DataTweaker
   double average= sum/n; 
 
   
- 
+
     System.out.println( "Average = " + average );
  
    }
