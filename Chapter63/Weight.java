@@ -1,42 +1,51 @@
-class Constructor
+class Weight
 {
-    
   private int[] data;
-  
-  // Constructor
-  public Constructor(int[] init)
+
+  public Weight(int[] init)
   {
-    // Make data the same length
-    // as the array referenced by init.
-    int a[]= new int[data.length]; 
-    
-    // Copy values from the 
-    // input data to data.
-    for ( int j = 1 ; j < data.length ; j++ )
+    data = new int[init.length];
+
+    for (int j = 0; j < init.length; j++)
     {
-      a[j] = data[j]; 
+      data[j] = init[j];
     }
-  
-  
-  //Print
-  for (int j=0;j<a.length;++j)
-  {
-    System.out.println(a[j]+""); 
- 
-  }
-  new average()
-  {
 
-    double  n=data.length; 
-     double sum=0;  
-     for (int i = 0; i < data.length; i++) {
-     sum += data[i]; 
-   }
-   double average= sum/n; 
-  
+    System.out.println("Data: "+toString());
+    System.out.println("Average: " + this.average());
+    System.out.println("Average between days 5 and 25: " + subAverage(5,25));
+  }
+
+  public String toString(){
+    String dataString = "";
+    for(int i = 0; i < data.length; i++) {
+      dataString += (data[i] + ", ");
+    }
+    return dataString;
+  }
+
+  public int average() {
+    int avg = 0;
+    int t = 0;
+    if(data==null){
+        System.out.println("Data was null");
+        return -1;
+    }
+    for(int i = 0; i < data.length; i++) {
+      avg += data[i];
+      t++;
+    }
+    return avg / t;
+  }
+
+
+  public int subAverage(int start, int end) {
+    int average = 0;
+    int t = 0;
+    for(int i = start; i < (end - (start - 1)); i++) {
+      average += data[i];
+      t++;
+    }
+        return average / t;
   }
 }
-}
-
-
-
