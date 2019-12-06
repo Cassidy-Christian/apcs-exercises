@@ -9,10 +9,25 @@ class DataTweaker
     sum += val[i]; 
   }
   double average= sum/n; 
-
-  
-
-    System.out.println( "Average = " + average );
+  int newsum= 0; 
+  int discard=0;
+  double bsf=val[0];
+  for (int i =0; i<n; i++){
+      if(Math.abs(average-val[i])>bsf){
+          bsf=Math.abs(average-val[i]);
+          discard=i;
+      }
+  }
+      for (int i = 0; i < n; i++) {
+          if (i==discard){
+              continue;
+          }
+      newsum += val[i]; 
+       
+    }
+    double newaverage= newsum/(n-1);
+    System.out.println( " Original Average = " + average );
+  System.out.println("New Average=" +newaverage); 
  
    }
 }
