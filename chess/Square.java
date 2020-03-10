@@ -6,7 +6,7 @@ public class Square {
     private Color color = Color.BLACK;
     private boolean isHighlighted = false;
     private String piece = null;
-    private int width, length; 
+     
     public Square(int rank, int file, Color color) {
         this.rank = rank;
         this.file = file;
@@ -36,18 +36,6 @@ public class Square {
 
     public String getPiece() {
         return this.piece;
-    }
-    public int getWidth(){
-        return this.width; 
-    }
-    public int getLength(){
-        return this.length; 
-    }
-    public void setWidth(int width){
-        this.width=width; 
-    }
-    public void setLength(int length){
-        this.length=length; 
     }
 
     public void setPiece(String piece) {

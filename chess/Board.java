@@ -2,11 +2,14 @@ import java.awt.Color;
 
 public class Board {
     private Square[][] squares;
-    int numofinf = 0;
-    //int width, length; 
+   
+    int width, length; 
 
-    public Board() {
-    squares = new Square[8][8];
+    public Board(int width, int length) {
+        this.width=width; 
+        this.length=length; 
+
+    squares = new Square[width][length];
         Color color = Color.WHITE;
 
         // boolean isWhite=true;
@@ -37,7 +40,7 @@ public class Board {
     }
 
     public Square getSquare(int rank, int file) {
-        if (rank < 1 || 8 < rank || file < 1 || 8 < file) {
+        if (rank < 1 || length < rank || file < 1 || width < file) {
             return null;
         }
 
@@ -75,7 +78,7 @@ public class Board {
                 }
 
                 else if (squares[row][col].isHighlighted()) {
-                    System.out.print("+");
+                    System.out.print("+");}
 
                     // if(numofinf>25){
                     //     System.out.print("@"); 
@@ -86,10 +89,8 @@ public class Board {
                     //     }
 
 
-                    numofinf++;
-                } else if(numofinf>20){
-                    System.out.print("@"); 
-                }
+                    
+               
                 
                 else if (squares[row][col].getColor().equals(Color.WHITE)) {
                     System.out.print("-");
@@ -103,13 +104,22 @@ public class Board {
 
     }
 
-    public void getInfluence() {
-        System.out.println(numofinf);
-    }
+   
+
+    // public void getInfluence() {
+    //     System.out.println(numofinf);
+    // }
 
     // public void getMaxQueen(){
     //         if(numofinf>25){
     //             System.out.println("Max influence for Queen is at:"+ rank +file );
     //         }
     // }
+    public int getWidth(){
+        return this.width; 
+    }
+    public int getLength(){
+        return this.length; 
+    }
+  
 }
