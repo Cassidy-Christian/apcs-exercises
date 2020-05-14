@@ -1,6 +1,11 @@
+/*
+ <applet code="Tennis.class" CodeBase="" width=300 height=400></applet>
+ */
+
 import java.applet.Applet;
 import java.awt.Color; 
 import java.awt.Graphics; 
+import java.awt.event.*; 
 
 public class Tennis extends Applet implements Runnable, KeyListener{
     final int WIDTH=700, HEIGHT=500; 
@@ -16,8 +21,8 @@ public class Tennis extends Applet implements Runnable, KeyListener{
         this.addKeyListener(this);
         gameStarted=false; 
         p1= new HumanPaddle(1); 
-        p2= new AIPaddle(2, b1); 
-        b1= new Ball(); 
+        b1= new Ball();
+        p2= new AIPaddle(2, b1);  
         thread= new Thread(this);
         thread.start();
     }
@@ -71,7 +76,7 @@ public class Tennis extends Applet implements Runnable, KeyListener{
                     p1.setDownAccel(true); 
             }
             else if(e.getKeyCode() == KeyEvent.VK_ENTER){
-                gamestarted=true; 
+                gameStarted=true; 
             }
     }
 
