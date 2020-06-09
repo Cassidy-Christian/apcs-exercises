@@ -41,7 +41,7 @@ public class Tennis extends Applet implements Runnable, KeyListener{
         if(!gameStarted){
             g.setColor(Color.WHITE); 
             g.drawString("Tennis", 340, 100); 
-            g.drawString("Press Enter to Begin!", 310, 130); 
+            g.drawString("Join Sea Scouts! Press Enter to Begin!", 310, 130); 
         }
       
         
